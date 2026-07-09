@@ -29,7 +29,7 @@ public class CategoryController {
     }
 
     @GetMapping()
-    public ResponseEntity<List<CategoryResponse>> findAll() {
+    public ResponseEntity<List<CategoryResponse>> getAll() {
         List<CategoryResponse> categories = categoryService.findAll().stream()
                 .map(CategoryMapper::toCategoryResponse)
                 .toList();
